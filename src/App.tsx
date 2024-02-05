@@ -1,7 +1,7 @@
 import "./App.css";
 import { Modal } from "./components/Modal";
 import { useState } from "react";
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const AnimalData = [
   {
@@ -97,8 +97,38 @@ const AnimalData = [
   },
 ];
 
-const StyledButton = styled.button `
-  padding: 30px;
+interface StyledButtonProps {
+  size?: 'small' | 'medium' | 'large';
+}
+
+const paddingSizes = {
+  small: '20px',
+  medium: '40px',
+  large: '60px',
+};
+
+interface StyledButtonProps {
+  color?: 'primary' | 'secondary';
+}
+
+const buttonColors = {
+  primary: '#7ed56f',
+  secondary:'#ffb900'
+}
+
+const StyledButton = styled.button<StyledButtonProps>`
+  padding: ${({ size }) => (size ? paddingSizes[size] : paddingSizes.medium)};
+  border-radius: 20px;
+  font-size: 20px;
+  background-color: ${({ color }) => (color ? buttonColors[color] : buttonColors.primary)};
+`;
+
+const StyledControlsSection = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  padding-top: 120px;
 `;
 
 function App() {
@@ -110,12 +140,16 @@ function App() {
 
   const handleClose = () => {
     setIsModalOpen(false);
-  }
+  };
 
   return (
-    <div>
-      <StyledButton onClick={handleOpen}>Open Deck</StyledButton>
-      <Modal cards={AnimalData} isOpen={isModalOpen} onClose={handleClose}/>
+    <div className="mainContainer">
+      <StyledControlsSection>
+        <StyledButton size="medium" color="primary" onClick={handleOpen}>Open Deck</StyledButton>
+        <StyledButton size="large" color="secondary" onClick={handleOpen}>Get Coins</StyledButton>
+        <StyledButton size="medium" color="primary" onClick={handleOpen}>Open Shop</StyledButton>
+      </StyledControlsSection>
+      <Modal cards={AnimalData} isOpen={isModalOpen} onClose={handleClose} />
     </div>
   );
 }
