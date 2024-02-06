@@ -21,14 +21,21 @@ export const ModalContent = styled.div`
   width: 90%;
   overflow-y: auto; 
   padding-top: 25px;
+  padding-bottom: 60px;
 
   .DeckHeader {
     text-align: center;
     font-size: 5.5rem;
   }
 
+  @media (max-width: ${breakpoints.largeScreens}) {
+    padding-bottom: 200px;
+  }
+
   @media (max-width: ${breakpoints.tablet}) {
     width: 80%;
+    padding-bottom: 220px;
+
 
     .DeckHeader {
       text-align: center;
@@ -36,10 +43,8 @@ export const ModalContent = styled.div`
     }
   }
 
-  @media (max-width: ${breakpoints.tablet}) {
-
+  @media (max-width: ${breakpoints.mobile}) {
     .DeckHeader {
-      text-align: center;
       font-size: 3.5rem;
     }
   }
