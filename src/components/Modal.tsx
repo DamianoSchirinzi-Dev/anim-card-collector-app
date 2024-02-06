@@ -1,41 +1,8 @@
-import styled from "styled-components";
-import { AnimalCard, AnimalCardProps } from "../components/AnimalCard";
+import { AnimalCard } from "../components/AnimalCard";
+import {ModalBackdrop, ModalContent, GridContainer} from "./StyledModal";
+import {ModalProps, AnimalCardProps } from "../helpers/types";
 import { colors } from "..//helpers/colors";
 import {useRef} from 'react';
-
-const ModalBackdrop = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-`;
-
-const ModalContent = styled.div`
-  background: white;
-  border-radius: 5px;
-  height: 90%;
-  width: 90%;
-  overflow-y: auto; /* Makes the modal content scrollable */
-`;
-
-const GridContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  row-gap: 60px;
-  padding: 50px; // Padding around the grid
-`;
-
-type ModalProps = {
-  cards: any;
-  isOpen: boolean;
-  onClose: () => void;
-};
 
 export const Modal = ({ cards, isOpen, onClose }: ModalProps) => {
     const modalRef = useRef<HTMLDivElement>(null);

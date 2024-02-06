@@ -1,7 +1,7 @@
 import "./App.css";
 import { Modal } from "./components/Modal";
 import { useState } from "react";
-import styled from "styled-components";
+import { StyledControlsSection, StyledButton } from "./components/StyledMainPageComponents";
 
 const AnimalData = [
   {
@@ -96,40 +96,6 @@ const AnimalData = [
       "The panda, also known as the giant panda, is a bear species primarily recognized for its distinctive black and white coloring. Originating from central China, pandas inhabit mountainous regions like Sichuan and Tibet. They have a diet mainly consisting of bamboo, although they can eat other foods such as honey, eggs, fish, yams, and shrub leaves, due to their classification as omnivores.",
   },
 ];
-
-interface StyledButtonProps {
-  size?: 'small' | 'medium' | 'large';
-}
-
-const paddingSizes = {
-  small: '20px',
-  medium: '40px',
-  large: '60px',
-};
-
-interface StyledButtonProps {
-  color?: 'primary' | 'secondary';
-}
-
-const buttonColors = {
-  primary: '#7ed56f',
-  secondary:'#ffb900'
-}
-
-const StyledButton = styled.button<StyledButtonProps>`
-  padding: ${({ size }) => (size ? paddingSizes[size] : paddingSizes.medium)};
-  border-radius: 20px;
-  font-size: 20px;
-  background-color: ${({ color }) => (color ? buttonColors[color] : buttonColors.primary)};
-`;
-
-const StyledControlsSection = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-
-  padding-top: 120px;
-`;
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);

@@ -15,3 +15,7 @@ export const colors = {
     black: '#000'
   };
   
+  export const buttonColors = {
+    primary: '#7ed56f',
+    secondary:'#ffb900'
+  }

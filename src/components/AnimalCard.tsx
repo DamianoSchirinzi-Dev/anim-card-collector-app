@@ -1,36 +1,11 @@
 import { Reset } from "../helpers/Reset";
 import {
   Card,
-  CardTitle,
-  CardDetails,
-  CardPicture,
+  CardTitle,  
   CardSide,
 } from "../components/Card";
-import styled from "styled-components";
-
-const CardWrapper = styled.div`
-  height: 52rem;
-  width: 35rem;
- 
-  @media (max-width: 360px) {
-    height: 36rem;
-    width: 24rem;
-  }
-`;
-
-export type AnimalCardProps = {
-    key: number,
-    imageUrl: string,
-    cardTitle: string,
-    speedStat: number,
-    weightStat: number,
-    aggressivenessStat: number,
-    intelligenceStat: number,
-    weaponryStat: number,
-    information: string,
-    colorLight: string,
-    colorDark: string,
-}
+import {CardDetails, CardPicture, CardWrapper } from "./StyledCard";
+import { AnimalCardProps } from "../helpers/types";
 
 export const AnimalCard = (props: AnimalCardProps) => {
     return(
