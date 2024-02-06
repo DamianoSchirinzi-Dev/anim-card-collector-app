@@ -4,3 +4,6 @@ export const paddingSizes = {
     large: '60px',
   };
   
+export const breakpoints = {
+    tablet: "600px"
+}

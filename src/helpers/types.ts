@@ -40,6 +40,6 @@ export type ModalProps = {
 //#region Main Screen
 export type StyledButtonProps = {
   size?: 'small' | 'medium' | 'large';
-  color?: 'primary' | 'secondary';
+  color?: 'primaryButton' | 'secondaryButton';
 }
 //#endregion

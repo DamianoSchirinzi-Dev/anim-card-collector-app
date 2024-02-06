@@ -1,7 +1,11 @@
 import "./App.css";
 import { Modal } from "./components/Modal";
 import { useState } from "react";
-import { StyledControlsSection, StyledButton } from "./components/StyledMainPageComponents";
+import {
+  StyledControlsSection,
+  StyledButton,
+  StyledNav
+} from "./components/StyledMainPageComponents";
 
 const AnimalData = [
   {
@@ -99,6 +103,7 @@ const AnimalData = [
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [userCoins, setUserCoins] = useState(12);
 
   const handleOpen = () => {
     setIsModalOpen(true);
@@ -110,10 +115,22 @@ function App() {
 
   return (
     <div className="mainContainer">
+      <StyledNav>
+        <h1>Animal Card Collector</h1>
+        <div>
+          <h3>🤑 User Coins: {userCoins}</h3>
+        </div>
+      </StyledNav>
       <StyledControlsSection>
-        <StyledButton size="medium" color="primary" onClick={handleOpen}>Open Deck</StyledButton>
-        <StyledButton size="large" color="secondary" onClick={handleOpen}>Get Coins</StyledButton>
-        <StyledButton size="medium" color="primary" onClick={handleOpen}>Open Shop</StyledButton>
+        <StyledButton size="medium" color="primaryButton" onClick={handleOpen}>
+          Open Deck
+        </StyledButton>
+        <StyledButton size="large" color="secondaryButton" onClick={handleOpen}>
+          Get Coins
+        </StyledButton>
+        <StyledButton size="medium" color="primaryButton" onClick={handleOpen}>
+          Open Shop
+        </StyledButton>
       </StyledControlsSection>
       <Modal cards={AnimalData} isOpen={isModalOpen} onClose={handleClose} />
     </div>

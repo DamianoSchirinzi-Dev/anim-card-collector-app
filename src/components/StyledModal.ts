@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoints } from "../helpers/sizes";
 
 export const ModalBackdrop = styled.div`
   position: fixed;
@@ -25,5 +26,17 @@ export const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
   row-gap: 60px;
-  padding: 50px; // Padding around the grid
+  padding: 50px;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(2, 1fr); 
+    row-gap: 30px;
+    padding: 60px;
+  }
+
+  @media (max-width: 960px) {
+    grid-template-columns: repeat(1, 1fr); 
+    row-gap: 30px;
+    padding: 60px;
+  }
 `;

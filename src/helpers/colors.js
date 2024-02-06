@@ -14,8 +14,12 @@ export const colors = {
     white: '#fff',
     black: '#000'
   };
-  
-  export const buttonColors = {
-    primary: '#7ed56f',
-    secondary:'#ffb900'
+
+  export const mainThemeColors = {
+    primaryButton: '#DCED31',
+    secondaryButton:'#0CCE6B',
+    mainDark: '#363537',
+    highlightColor: '#EF2D56',
+    mainBackground: '#F1E4E8',
+    mainFont: '#EEEAEB'
   }
