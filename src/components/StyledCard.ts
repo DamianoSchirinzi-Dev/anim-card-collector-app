@@ -17,7 +17,7 @@ export const CardWrapper = styled.div`
   }
 
   @media (max-width: ${breakpoints.mobile}) {
-    height: 30rem;
+    height: 26.5rem;
     width: 22rem;
   }
 `;
@@ -154,6 +154,10 @@ export const CardDetails = styled.div`
     list-style: none;    
   }
 
+  p {
+    2.2rem;
+  }
+
   li {
     padding: 0.1rem 0; 
     border-bottom: 1px solid #ccc;
@@ -169,20 +173,22 @@ export const CardDetails = styled.div`
     h1 { 
       font-size: 3rem;
     }
+
+    p {
+      font-size: 1.8rem;
+    }
   }  
   
   @media (max-width: ${breakpoints.mobile}) {
     li {
-      padding-left:2px;
-      
-   
+      padding-left:2px;   
     }
 
     h1 { 
       font-size: 2rem;
     }
 
-    ol {
+    ol, p {
       font-size: 1.5rem;
     }
   }
