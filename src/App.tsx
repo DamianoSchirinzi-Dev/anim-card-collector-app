@@ -29,7 +29,7 @@ const AnimalData = [
     speedStat: 23,
     weightStat: 400,
     aggressivenessStat: 87,
-    intellifenceStat: 65,
+    intelligenceStat: 65,
     weaponryStat: 82,
     information:
       "The panda, also known as the giant panda, is a bear species primarily recognized for its distinctive black and white coloring. Originating from central China, pandas inhabit mountainous regions like Sichuan and Tibet. They have a diet mainly consisting of bamboo, although they can eat other foods such as honey, eggs, fish, yams, and shrub leaves, due to their classification as omnivores.",
@@ -42,7 +42,7 @@ const AnimalData = [
     speedStat: 23,
     weightStat: 400,
     aggressivenessStat: 87,
-    intellifenceStat: 65,
+    intelligenceStat: 65,
     weaponryStat: 82,
     information:
       "The panda, also known as the giant panda, is a bear species primarily recognized for its distinctive black and white coloring. Originating from central China, pandas inhabit mountainous regions like Sichuan and Tibet. They have a diet mainly consisting of bamboo, although they can eat other foods such as honey, eggs, fish, yams, and shrub leaves, due to their classification as omnivores.",
@@ -55,7 +55,7 @@ const AnimalData = [
     speedStat: 23,
     weightStat: 400,
     aggressivenessStat: 87,
-    intellifenceStat: 65,
+    intelligenceStat: 65,
     weaponryStat: 82,
     information:
       "The panda, also known as the giant panda, is a bear species primarily recognized for its distinctive black and white coloring. Originating from central China, pandas inhabit mountainous regions like Sichuan and Tibet. They have a diet mainly consisting of bamboo, although they can eat other foods such as honey, eggs, fish, yams, and shrub leaves, due to their classification as omnivores.",
@@ -68,7 +68,7 @@ const AnimalData = [
     speedStat: 23,
     weightStat: 400,
     aggressivenessStat: 87,
-    intellifenceStat: 65,
+    intelligenceStat: 65,
     weaponryStat: 82,
     information:
       "The panda, also known as the giant panda, is a bear species primarily recognized for its distinctive black and white coloring. Originating from central China, pandas inhabit mountainous regions like Sichuan and Tibet. They have a diet mainly consisting of bamboo, although they can eat other foods such as honey, eggs, fish, yams, and shrub leaves, due to their classification as omnivores.",
@@ -81,7 +81,7 @@ const AnimalData = [
     speedStat: 23,
     weightStat: 400,
     aggressivenessStat: 87,
-    intellifenceStat: 65,
+    intelligenceStat: 65,
     weaponryStat: 82,
     information:
       "The panda, also known as the giant panda, is a bear species primarily recognized for its distinctive black and white coloring. Originating from central China, pandas inhabit mountainous regions like Sichuan and Tibet. They have a diet mainly consisting of bamboo, although they can eat other foods such as honey, eggs, fish, yams, and shrub leaves, due to their classification as omnivores.",
@@ -94,7 +94,7 @@ const AnimalData = [
     speedStat: 23,
     weightStat: 400,
     aggressivenessStat: 87,
-    intellifenceStat: 65,
+    intelligenceStat: 65,
     weaponryStat: 82,
     information:
       "The panda, also known as the giant panda, is a bear species primarily recognized for its distinctive black and white coloring. Originating from central China, pandas inhabit mountainous regions like Sichuan and Tibet. They have a diet mainly consisting of bamboo, although they can eat other foods such as honey, eggs, fish, yams, and shrub leaves, due to their classification as omnivores.",

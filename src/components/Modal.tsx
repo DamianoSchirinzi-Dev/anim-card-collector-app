@@ -18,6 +18,7 @@ export const Modal = ({ cards, isOpen, onClose }: ModalProps) => {
   return (
     <ModalBackdrop onClick={handleClose}>
       <ModalContent ref={modalRef}>
+        <h1 className="DeckHeader">Your Cards</h1>
         <GridContainer>
           {cards.map((data: AnimalCardProps) => (
             <AnimalCard

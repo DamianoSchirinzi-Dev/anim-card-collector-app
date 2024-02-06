@@ -1,15 +1,24 @@
-import styled from 'styled-components';
-import { rgba } from 'polished';
-import { colors } from '../helpers/colors';
-import {CardPictureProps} from '../helpers/types'
+import styled from "styled-components";
+import { rgba } from "polished";
+import { colors } from "../helpers/colors";
+import { CardPictureProps } from "../helpers/types";
+import { breakpoints } from "../helpers/sizes";
 
 export const CardWrapper = styled.div`
   height: 52rem;
   width: 35rem;
- 
-  @media (max-width: 360px) {
+
+  @media (max-width: ${breakpoints.largeScreens}) {
     height: 36rem;
-    width: 24rem;
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    width: 28rem;
+  }
+
+  @media (max-width: ${breakpoints.mobile}) {
+    height: 30rem;
+    width: 22rem;
   }
 `;
 
@@ -18,7 +27,7 @@ export const CardPicture = styled.div<CardPictureProps>`
   height: 23rem;
   background-blend-mode: screen;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-  background-image: ${props => `
+  background-image: ${(props) => `
       linear-gradient(
       to right bottom,
       ${props.theme.colorLight},
@@ -27,12 +36,11 @@ export const CardPicture = styled.div<CardPictureProps>`
     url(${props.src})`};
 `;
 
-
 export const CardHeadingSpan = styled.span`
   padding: 1rem 1.5rem;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
-  background-image: ${props => `
+  background-image: ${(props) => `
   linear-gradient(
     to right bottom,
     ${rgba(props.theme.colorLight, 0.85)},
@@ -52,6 +60,15 @@ export const CardHeading = styled.h4`
   top: 18rem;
   width: 75%;
   right: 1.2rem;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    font-size: 2.4rem;
+  }
+
+  @media (max-width: ${breakpoints.mobile}) {
+    top: 20rem;
+    font-size: 1.8rem;
+  }
 `;
 
 export const CardSideWrapper = styled.div`
@@ -86,6 +103,15 @@ export const CardSideWrapper = styled.div`
     &:hover {
       background: #555; // Color when hovering
     }
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    height: 52rem;
+  }    
+
+  @media (max-width: ${breakpoints.mobile}) {
+    height: 44rem;
+  }
 `;
 
 export const CardSideFront = styled(CardSideWrapper)`
@@ -95,7 +121,7 @@ export const CardSideFront = styled(CardSideWrapper)`
 export const CardSideBack = styled(CardSideWrapper)`
   transform: rotateY(-180deg);
   color: ${colors.white};
-  background-image: ${props => `
+  background-image: ${(props) => `
       linear-gradient(to right bottom,
       ${props.theme.colorLight},
       ${props.theme.colorDark}
@@ -105,7 +131,7 @@ export const CardSideBack = styled(CardSideWrapper)`
 export const CardContainer = styled.div`
   perspective: 150rem;
   position: relative;
-  max-height: 52rem;
+  max-height: 30rem;
 
   &:hover ${CardSideFront} {
     transform: rotateY(180deg);
@@ -118,17 +144,46 @@ export const CardContainer = styled.div`
 
 export const CardDetails = styled.div`
   padding: 2rem 3rem;
-  font-size: 2rem;
+  font-size: 2.2rem;
 
-  ol, li {
-    list-style: none;
+  h1 { 
+    font-size: 3rem;
+  }
+
+  ol {
+    list-style: none;    
   }
 
   li {
-    padding: 0.1rem 0; // Add padding to top and bottom of list item for spacing
-    border-bottom: 1px solid #ccc; // Add a bottom border as a separator
-
+    padding: 0.1rem 0; 
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+    padding-left:10px;
+    
     &:last-child {
       border-bottom: none; // Remove bottom border from the last list item
     }
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    h1 { 
+      font-size: 3rem;
+    }
+  }  
+  
+  @media (max-width: ${breakpoints.mobile}) {
+    li {
+      padding-left:2px;
+      
+   
+    }
+
+    h1 { 
+      font-size: 2rem;
+    }
+
+    ol {
+      font-size: 1.5rem;
+    }
+  }
 `;

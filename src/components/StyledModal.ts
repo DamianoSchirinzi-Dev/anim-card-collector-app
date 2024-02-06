@@ -19,24 +19,49 @@ export const ModalContent = styled.div`
   border-radius: 5px;
   height: 90%;
   width: 90%;
-  overflow-y: auto; /* Makes the modal content scrollable */
+  overflow-y: auto; 
+  padding-top: 25px;
+
+  .DeckHeader {
+    text-align: center;
+    font-size: 5.5rem;
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    width: 80%;
+
+    .DeckHeader {
+      text-align: center;
+      font-size: 4.5rem;
+    }
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+
+    .DeckHeader {
+      text-align: center;
+      font-size: 3.5rem;
+    }
+  }
 `;
 
 export const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr); 
   row-gap: 60px;
-  padding: 50px;
+  padding: 40px;
+  justify-items: center;
+  align-items: center;
 
-  @media (max-width: 1200px) {
+  @media (max-width: ${breakpoints.xLargeScreens}) {
     grid-template-columns: repeat(2, 1fr); 
-    row-gap: 30px;
+    row-gap: 50px;
     padding: 60px;
   }
 
-  @media (max-width: 960px) {
+  @media (max-width: ${breakpoints.largeScreens}) {
     grid-template-columns: repeat(1, 1fr); 
-    row-gap: 30px;
-    padding: 60px;
+    row-gap: 220px;
+    padding: 30px;
   }
 `;
