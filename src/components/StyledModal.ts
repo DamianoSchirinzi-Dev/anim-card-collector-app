@@ -36,7 +36,6 @@ export const ModalContent = styled.div`
     width: 80%;
     padding-bottom: 220px;
 
-
     .DeckHeader {
       text-align: center;
       font-size: 4.5rem;
@@ -44,6 +43,8 @@ export const ModalContent = styled.div`
   }
 
   @media (max-width: ${breakpoints.mobile}) {
+    padding-bottom: 270px;
+
     .DeckHeader {
       font-size: 3.5rem;
     }
