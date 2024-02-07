@@ -1,13 +1,14 @@
 import styled from "styled-components";
 import { breakpoints } from "../helpers/sizes";
+import { mainThemeColors } from "../helpers/colors";
 
 export const ModalBackdrop = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;;
+  background: rgba(0, 0, 0, 0.85);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,6 +23,8 @@ export const ModalContent = styled.div`
   overflow-y: auto; 
   padding-top: 25px;
   padding-bottom: 60px;
+  
+  color: ${mainThemeColors.mainFont};
 
   .DeckHeader {
     text-align: center;
