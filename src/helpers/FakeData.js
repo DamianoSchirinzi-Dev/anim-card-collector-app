@@ -1,93 +1,122 @@
 export const AnimalData = [
-    {
-      key: 0,
-      imageUrl:
-        "https://images.unsplash.com/photo-1597953601374-1ff2d5640c85?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      cardTitle: "Giant Panda",
-      speedStat: 23,
-      weightStat: 400,
-      aggressivenessStat: 87,
-      intelligenceStat: 65,
-      weaponryStat: 82,
-      information:
-        "The panda, also known as the giant panda, is a bear species primarily recognized for its distinctive black and white coloring. Originating from central China, pandas inhabit mountainous regions like Sichuan and Tibet. They have a diet mainly consisting of bamboo, although they can eat other foods such as honey, eggs, fish, yams, and shrub leaves, due to their classification as omnivores.",
-    },
-    {
-      key: 1,
-      imageUrl:
-        "https://images.unsplash.com/photo-1597953601374-1ff2d5640c85?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      cardTitle: "Giant Panda",
-      speedStat: 23,
-      weightStat: 400,
-      aggressivenessStat: 87,
-      intelligenceStat: 65,
-      weaponryStat: 82,
-      information:
-        "The panda, also known as the giant panda, is a bear species primarily recognized for its distinctive black and white coloring. Originating from central China, pandas inhabit mountainous regions like Sichuan and Tibet. They have a diet mainly consisting of bamboo, although they can eat other foods such as honey, eggs, fish, yams, and shrub leaves, due to their classification as omnivores.",
-    },
-    {
-      key: 2,
-      imageUrl:
-        "https://images.unsplash.com/photo-1597953601374-1ff2d5640c85?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      cardTitle: "Giant Panda",
-      speedStat: 23,
-      weightStat: 400,
-      aggressivenessStat: 87,
-      intelligenceStat: 65,
-      weaponryStat: 82,
-      information:
-        "The panda, also known as the giant panda, is a bear species primarily recognized for its distinctive black and white coloring. Originating from central China, pandas inhabit mountainous regions like Sichuan and Tibet. They have a diet mainly consisting of bamboo, although they can eat other foods such as honey, eggs, fish, yams, and shrub leaves, due to their classification as omnivores.",
-    },
-    {
-      key: 3,
-      imageUrl:
-        "https://images.unsplash.com/photo-1597953601374-1ff2d5640c85?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      cardTitle: "Giant Panda",
-      speedStat: 23,
-      weightStat: 400,
-      aggressivenessStat: 87,
-      intelligenceStat: 65,
-      weaponryStat: 82,
-      information:
-        "The panda, also known as the giant panda, is a bear species primarily recognized for its distinctive black and white coloring. Originating from central China, pandas inhabit mountainous regions like Sichuan and Tibet. They have a diet mainly consisting of bamboo, although they can eat other foods such as honey, eggs, fish, yams, and shrub leaves, due to their classification as omnivores.",
-    },
-    {
-      key: 4,
-      imageUrl:
-        "https://images.unsplash.com/photo-1597953601374-1ff2d5640c85?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      cardTitle: "Giant Panda",
-      speedStat: 23,
-      weightStat: 400,
-      aggressivenessStat: 87,
-      intelligenceStat: 65,
-      weaponryStat: 82,
-      information:
-        "The panda, also known as the giant panda, is a bear species primarily recognized for its distinctive black and white coloring. Originating from central China, pandas inhabit mountainous regions like Sichuan and Tibet. They have a diet mainly consisting of bamboo, although they can eat other foods such as honey, eggs, fish, yams, and shrub leaves, due to their classification as omnivores.",
-    },
-    {
-      key: 5,
-      imageUrl:
-        "https://images.unsplash.com/photo-1597953601374-1ff2d5640c85?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      cardTitle: "Giant Panda",
-      speedStat: 23,
-      weightStat: 400,
-      aggressivenessStat: 87,
-      intelligenceStat: 65,
-      weaponryStat: 82,
-      information:
-        "The panda, also known as the giant panda, is a bear species primarily recognized for its distinctive black and white coloring. Originating from central China, pandas inhabit mountainous regions like Sichuan and Tibet. They have a diet mainly consisting of bamboo, although they can eat other foods such as honey, eggs, fish, yams, and shrub leaves, due to their classification as omnivores.",
-    },
-    {
-      key: 6,
-      imageUrl:
-        "https://images.unsplash.com/photo-1597953601374-1ff2d5640c85?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      cardTitle: "Giant Panda",
-      speedStat: 23,
-      weightStat: 400,
-      aggressivenessStat: 87,
-      intelligenceStat: 65,
-      weaponryStat: 82,
-      information:
-        "The panda, also known as the giant panda, is a bear species primarily recognized for its distinctive black and white coloring. Originating from central China, pandas inhabit mountainous regions like Sichuan and Tibet. They have a diet mainly consisting of bamboo, although they can eat other foods such as honey, eggs, fish, yams, and shrub leaves, due to their classification as omnivores.",
-    },
-  ];
+  {
+    key: 0,
+    imageUrl: "https://images.unsplash.com/photo-1597953601374-1ff2d5640c85?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    cardTitle: "Giant Panda",
+    speedStat: 20,
+    weightStat: 220,
+    aggressivenessStat: 30,
+    intelligenceStat: 70,
+    weaponryStat: 40,
+    information:
+      "Giant Pandas are known for their distinct black-and-white coloring and their diet primarily of bamboo. They are native to the mountain ranges in central China. These creatures are adored worldwide for their cuddly appearance and peaceful demeanor, spending most of their days munching on bamboo and resting. Despite their gentle nature, pandas are strong swimmers and can climb trees adeptly. Conservation efforts have helped increase their population, although they remain a symbol of vulnerable species.",
+  },
+  {
+    key: 1,
+    imageUrl: "https://images.unsplash.com/photo-1544211412-2a32426e7fd5?q=80&w=1978&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    cardTitle: "African Elephant",
+    speedStat: 40,
+    weightStat: 6000,
+    aggressivenessStat: 50,
+    intelligenceStat: 60,
+    weaponryStat: 90,
+    information:
+      "The African Elephant is the largest land animal, characterized by its large ears, tusks, and a trunk used for communication and handling objects. These magnificent creatures are highly social, living in complex familial herds led by a matriarch. Their memory and intelligence are remarkable, enabling them to remember water sources over vast distances and recognize long-lost friends. Elephants play a crucial role in their ecosystem by facilitating seed dispersal and creating waterholes used by other animals.",
+  },
+  {
+    key: 2,
+    imageUrl: "https://images.unsplash.com/photo-1619494296448-ab5f847ece97?q=80&w=2050&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    cardTitle: "Cheetah",
+    speedStat: 120,
+    weightStat: 75,
+    aggressivenessStat: 60,
+    intelligenceStat: 70,
+    weaponryStat: 60,
+    information:
+      "Cheetahs are renowned for their speed, reaching up to 75 mph in short bursts covering distances up to 1,500 ft, and have the ability to accelerate from 0 to 60 mph in just a few seconds. This incredible speed, combined with their keen eyesight and slender body, makes them formidable hunters. Primarily feeding on small to medium-sized ungulates, cheetahs employ a strategy of stealth and explosive speed to catch their prey. Their distinctive black tear marks help to reflect the glare of the sun while hunting during the day.",
+  },
+  {
+    key: 3,
+    imageUrl: "https://images.unsplash.com/photo-1584268297019-243f5c397094?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    cardTitle: "Blue Whale",
+    speedStat: 50,
+    weightStat: 190000,
+    aggressivenessStat: 20,
+    intelligenceStat: 50,
+    weaponryStat: 30,
+    information:
+      "Blue Whales are the largest animals ever known to have lived on Earth, with hearts the size of a small car. They primarily feed on tiny shrimp-like animals called krill. During the feeding season, a single adult blue whale consumes about 4 tons of krill a day. Blue whales are found in all the world's oceans, except the Arctic, preferring deep offshore waters. They communicate with each other through loud low-pitched moans and whines, which can be heard for many miles underwater.",
+  },
+  {
+    key: 4,
+    imageUrl: "https://images.unsplash.com/photo-1560653251-84afe9d7eef7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    cardTitle: "Bald Eagle",
+    speedStat: 160,
+    weightStat: 6.3,
+    aggressivenessStat: 70,
+    intelligenceStat: 80,
+    weaponryStat: 80,
+    information:
+      "The Bald Eagle, the national bird of the United States, is a bird of prey known for its strength, long life, and majestic appearance. With a wingspan of up to 7.5 feet, bald eagles soar high in the sky, scanning the ground with their sharp vision for fish, which is their primary food source. They build the largest nest of any North American bird, which can be up to 8 feet wide and weigh as much as a ton. Bald eagles mate for life, choosing the tops of large trees to build nests, where they return year after year.",
+  },
+  {
+    key: 5,
+    imageUrl: "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    cardTitle: "Siberian Tiger",
+    speedStat: 60,
+    weightStat: 310,
+    aggressivenessStat: 90,
+    intelligenceStat: 80,
+    weaponryStat: 95,
+    information:
+      "The Siberian Tiger, also known as the Amur tiger, is the world's largest cat and inhabits the Sikhote Alin mountain range in Russia. These majestic predators are known for their powerful build and beautiful, thick coats which help them to survive in harsh, cold climates. Siberian tigers are solitary animals, marking large territories that can be up to 4,000 square miles. They play a critical role in their ecosystem by controlling prey populations and maintaining the balance of their environment.",
+  },
+  {
+    key: 6,
+    imageUrl: "https://images.unsplash.com/photo-1626803111824-0ee594987d4b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    cardTitle: "Kangaroo",
+    speedStat: 70,
+    weightStat: 90,
+    aggressivenessStat: 50,
+    intelligenceStat: 60,
+    weaponryStat: 70,
+    information:
+      "Kangaroos are iconic Australian marsupials known for their powerful hind legs, large feet, and long tails, allowing them to leap great distances. They are capable of covering 15 feet in a single hop and can reach speeds of up to 30 miles per hour. Kangaroos are also known for their unique way of moving, hopping as a means of locomotion because their large feet cannot move independently of each other. Kangaroos have a complex social structure and communicate with each other using a variety of sounds, body movements, and scents.",
+  },
+  {
+    key: 7,
+    imageUrl: "https://images.unsplash.com/photo-1590691563977-97e10916647b?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    cardTitle: "Komodo Dragon",
+    speedStat: 20,
+    weightStat: 91,
+    aggressivenessStat: 80,
+    intelligenceStat: 60,
+    weaponryStat: 100,
+    information:
+      "Komodo Dragons are the largest living species of lizard, found in the Indonesian islands. They are top predators and have a venomous bite, capable of killing even large prey such as water buffalo. These formidable creatures can grow up to 10 feet in length and weigh over 150 pounds. Komodo dragons are solitary animals, coming together only to breed and eat. They have a keen sense of smell, using their forked tongues to detect prey up to 5 miles away. Their diet is varied, including carrion, deer, pigs, and even smaller dragons.",
+  },
+  {
+    key: 8,
+    imageUrl: "https://images.unsplash.com/photo-1553425300-8bd56360f8eb?q=80&w=1946&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    cardTitle: "Polar Bear",
+    speedStat: 40,
+    weightStat: 450,
+    aggressivenessStat: 85,
+    intelligenceStat: 70,
+    weaponryStat: 92,
+    information:
+      "Polar Bears are native to the Arctic Circle, surrounded by sea ice, where they spend much of their time on the ice hunting seals. They are superb swimmers and can cover miles in search of food. Polar bears have a layer of fat under their skin and a thick coat of fur, which insulates them against the cold. They are the largest land carnivores, with adult males weighing up to 1,500 pounds. Polar bears play a key role in the Arctic ecosystem but are currently facing threats from climate change and loss of their sea ice habitat.",
+  },
+  {
+    key: 9,
+    imageUrl: "https://images.unsplash.com/photo-1628944681206-2ee8d63b0a6b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    cardTitle: "Octopus",
+    speedStat: 40,
+    weightStat: 15,
+    aggressivenessStat: 60,
+    intelligenceStat: 90,
+    weaponryStat: 80,
+    information:
+      "Octopuses are sea creatures known for their eight arms and high intelligence. They can change color and texture to blend with their surroundings as a form of camouflage. Octopuses are highly intelligent, capable of solving complex problems and escaping from enclosures. They have been observed using tools, such as coconut shells for shelter, indicating a level of problem-solving ability. Their arms are equipped with suction cups that can taste and smell, adding to their sensory capabilities. Octopuses have a relatively short lifespan, with some species living for as little as six months.",
+  },
+];

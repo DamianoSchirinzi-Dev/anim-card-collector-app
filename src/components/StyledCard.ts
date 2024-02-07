@@ -58,16 +58,16 @@ export const CardHeading = styled.h4`
   color: ${colors.white};
   position: absolute;
   top: 18rem;
-  width: 75%;
-  right: 1.2rem;
+  width: 80%%;
+  right: .5rem;
 
   @media (max-width: ${breakpoints.tablet}) {
     font-size: 2.4rem;
   }
 
   @media (max-width: ${breakpoints.mobile}) {
-    top: 20rem;
-    font-size: 1.8rem;
+    top: 20.5rem;
+    font-size: 1.6rem;
   }
 `;
 
@@ -75,7 +75,7 @@ export const CardSideWrapper = styled.div`
   transition: all 0.8s ease;
   height: 52rem;
   font-size: 5rem;
-  border-radius: 3px;
+  border-radius: 10px;
   overflow: hidden;
   position: absolute;
   box-shadow: 0 1.5rem 4rem ${rgba(colors.black, 0.15)};
@@ -123,8 +123,8 @@ export const CardSideBack = styled(CardSideWrapper)`
   color: ${colors.white};
   background-image: ${(props) => `
       linear-gradient(to right bottom,
-      ${props.theme.colorLight},
-      ${props.theme.colorDark}
+      ${colors.tertiaryDark},
+      ${colors.greyDark3}
     )`};
 `;
 

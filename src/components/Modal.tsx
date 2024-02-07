@@ -1,5 +1,5 @@
 import { AnimalCard } from "../components/AnimalCard";
-import {ModalBackdrop, ModalContent, GridContainer} from "./StyledModal";
+import {ModalBackdrop, ModalContent, GridContainer, CloseSymbol} from "./StyledModal";
 import {ModalProps, AnimalCardProps } from "../helpers/types";
 import { colors } from "..//helpers/colors";
 import {useRef} from 'react';
@@ -17,6 +17,7 @@ export const Modal = ({ cards, isOpen, onClose }: ModalProps) => {
 
   return (
     <ModalBackdrop onClick={handleClose}>
+      <CloseSymbol>x</CloseSymbol>
       <ModalContent ref={modalRef}>
         <h1 className="DeckHeader">Your Cards</h1>
         <GridContainer>
@@ -31,8 +32,8 @@ export const Modal = ({ cards, isOpen, onClose }: ModalProps) => {
               intelligenceStat={data.intelligenceStat}
               weaponryStat={data.weaponryStat}
               information={data.information}
-              colorLight={colors.tertiaryDark}
-              colorDark={colors.greyDark3}
+              colorLight={colors.black}
+              colorDark={colors.black}
             />
           ))}
         </GridContainer>

@@ -2,6 +2,35 @@ import styled from "styled-components";
 import { breakpoints } from "../helpers/sizes";
 import { mainThemeColors } from "../helpers/colors";
 
+export const CloseSymbol = styled.span`
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 25px;
+  cursor: pointer;
+  pointer-events: none; /* Ignores mouse events */
+  font-size: 60px;
+  z-index: 10012; /* Ensure it's above ModalBackdrop but below ModalContent */
+  color: white;
+
+  @media (max-width: ${breakpoints.xLargeScreens}) {
+    padding-right: 16px;
+  }
+
+  @media (max-width: ${breakpoints.largeScreens}) {
+    font-size: 50px;
+
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    padding-right: 10px;
+  }
+
+  @media (max-width: ${breakpoints.largeScreens}) {
+    padding-right: 14px;
+  }  
+`;
+
 export const ModalBackdrop = styled.div`
   position: fixed;
   top: 0;
@@ -21,14 +50,14 @@ export const ModalContent = styled.div`
   height: 90%;
   width: 90%;
   overflow-y: auto; 
-  padding-top: 25px;
+  padding-top: 30px;
   padding-bottom: 60px;
   
   color: ${mainThemeColors.mainFont};
 
   .DeckHeader {
     text-align: center;
-    font-size: 5.5rem;
+    font-size: 5.8rem;
   }
 
   @media (max-width: ${breakpoints.largeScreens}) {
@@ -36,11 +65,10 @@ export const ModalContent = styled.div`
   }
 
   @media (max-width: ${breakpoints.tablet}) {
-    width: 80%;
+    width: 75%;
     padding-bottom: 220px;
 
     .DeckHeader {
-      text-align: center;
       font-size: 4.5rem;
     }
   }
@@ -49,7 +77,7 @@ export const ModalContent = styled.div`
     padding-bottom: 270px;
 
     .DeckHeader {
-      font-size: 3.5rem;
+      font-size: 4rem;
     }
   }
 `;

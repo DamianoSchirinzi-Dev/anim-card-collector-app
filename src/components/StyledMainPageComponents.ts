@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { StyledButtonProps } from "../helpers/types";
-import { paddingSizes, breakpoints, buttonFontSizes } from "../helpers/sizes";
+import { paddingSizes, breakpoints, buttonFontSizes, mobileButtonFontSizes } from "../helpers/sizes";
 import { mainThemeColors } from "../helpers/colors";
 
 export const StyledNav = styled.nav`
@@ -33,7 +33,7 @@ export const StyledNav = styled.nav`
 
   @media (max-width: ${breakpoints.largeScreens}) {
     h1 {
-      font-size: 20px;
+      font-size: 22px;
     }
 
     h3 {
@@ -63,6 +63,10 @@ export const StyledControlsSection = styled.div`
     padding-top: 40px;
 
     gap: 40px;
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    gap: 30px;
   }
 `;
 
@@ -94,6 +98,7 @@ export const StyledButton = styled.button<StyledButtonProps>`
 
   @media (max-width: ${breakpoints.tablet}) {
     padding: 70px;
+    font-size: ${({ size }) => (size ? mobileButtonFontSizes[size] : mobileButtonFontSizes.medium)};
   }
 
   @media (max-width: ${breakpoints.mobile}) {

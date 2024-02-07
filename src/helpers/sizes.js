@@ -9,6 +9,12 @@ export const paddingSizes = {
     medium: '30px',
     large: '40px',
   };
+
+  export const mobileButtonFontSizes = {
+    small: '10px',
+    medium: '20px',
+    large: '30px',
+  };
   
 export const breakpoints = {
     xLargeScreens: "1300px",
