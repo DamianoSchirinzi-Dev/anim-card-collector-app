@@ -74,7 +74,7 @@ export const ModalContent = styled.div`
   }
 
   @media (max-width: ${breakpoints.mobile}) {
-    padding-bottom: 270px;
+    padding-bottom: 220px;
 
     .DeckHeader {
       font-size: 4rem;
