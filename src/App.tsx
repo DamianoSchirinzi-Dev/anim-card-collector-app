@@ -62,24 +62,26 @@ function App() {
         <CoinCounter current={userCoins} max={100} />
       </StyledNav>
       <StyledControlsSection>
-        <StyledButton
-          size="medium"
-          color="secondaryButton"
-          onClick={handleOpen}
-        >
-          Open Deck
-        </StyledButton>
+        <div className="topButtonMenu">
+          <StyledButton
+            size="medium"
+            color="secondaryButton"
+            onClick={handleOpen}
+          >
+            Open Deck
+          </StyledButton>
+          <StyledButton
+            size="medium"
+            color="secondaryButton"
+            onClick={() => {
+              addCardId(7);
+            }}
+          >
+            Buy Cards
+          </StyledButton>
+        </div>
         <StyledButton size="large" onClick={incrementCoins}>
           Get Coins
-        </StyledButton>
-        <StyledButton
-          size="medium"
-          color="secondaryButton"
-          onClick={() => {
-            addCardId(7);
-          }}
-        >
-          Temp Buy Button
         </StyledButton>
       </StyledControlsSection>
       <Modal cards={userDeck} isOpen={isModalOpen} onClose={handleClose} />
