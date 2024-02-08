@@ -69,6 +69,7 @@ export const CounterCircle = styled.div`
   border: 3px solid #324dab;
   cursor: pointer;
   transition: transform 0.3s ease;
+  padding: 10px;
 
   // Apply the pulse animation
   animation: ${pulseAnimation} 2s infinite;
@@ -87,6 +88,7 @@ export const CounterCircle = styled.div`
     width: 80px;
     height: 80px;
     padding: 16px;
+    font-size: 18px;
   }
 `;
 
