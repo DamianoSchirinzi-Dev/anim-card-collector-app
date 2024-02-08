@@ -97,20 +97,39 @@ export const StyledControlsSection = styled.div`
   justify-content: space-evenly;
   align-items: center;
 
-  padding-top: 120px;
+  padding-top: 100px;
+  padding-top: 80px;
+
+  .topButtonMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
 
   @media (max-width: 1200px) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    padding-top: 40px;
+    padding: 60px 50px;
 
     gap: 40px;
+
+    .topButtonMenu {
+      display: flex;
+      flex-direction: row;
+    }
   }
 
   @media (max-width: ${breakpoints.tablet}) {
-    gap: 30px;
+    gap: 40px;
+  }
+
+  @media (max-width: ${breakpoints.mobile}) {
+
+    .topButtonMenu {
+      gap: 20px;
+    }
   }
 `;
 
@@ -143,12 +162,12 @@ export const StyledButton = styled.button<StyledButtonProps>`
   }
 
   @media (max-width: ${breakpoints.tablet}) {
-    padding: 70px;
+    padding: 60px;
     font-size: ${({ size }) =>
       size ? mobileButtonFontSizes[size] : mobileButtonFontSizes.medium};
   }
 
   @media (max-width: ${breakpoints.mobile}) {
-    padding: 50px;
+    padding: 40px;
   }
 `;

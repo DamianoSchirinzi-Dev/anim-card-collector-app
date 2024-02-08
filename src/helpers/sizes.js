@@ -1,13 +1,13 @@
 export const paddingSizes = {
     small: '20px',
-    medium: '90px',
-    large: '130px',
+    medium: '70px',
+    large: '100px',
   };
 
   export const buttonFontSizes = {
     small: '20px',
-    medium: '30px',
-    large: '40px',
+    medium: '25px',
+    large: '35px',
   };
 
   export const mobileButtonFontSizes = {
