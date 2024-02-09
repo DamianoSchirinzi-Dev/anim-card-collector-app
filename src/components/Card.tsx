@@ -15,8 +15,8 @@ export const CardTitle = (props : any)  => (
   </CardHeading>
 );
 
-export const Card = ({ colorLight, colorDark, children } : CardProps) => (
+export const Card = ({ isInShop, colorLight, colorDark, children } : CardProps) => (
   <ThemeProvider theme={{ colorLight, colorDark }}>
-    <CardContainer>{children}</CardContainer>
+    <CardContainer isInShop={isInShop}>{children}</CardContainer>
   </ThemeProvider>
 );

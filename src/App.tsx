@@ -10,16 +10,20 @@ import {
 } from "./components/StyledMainPageComponents";
 
 function App() {
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const [isDeckOpen, setisDeckOpen] = useState<boolean>(false);
+  const [isShopOpen, setisShopOpen] = useState<boolean>(false);
   const [userCardIds, setUserCardIds] = useState<number[]>([0, 2, 3]);
-  const [userDeck, setUserDeck] = useState<any[]>([]);
   const [userCoins, setUserCoins] = useState<number>(12);
+  const [userDeck, setUserDeck] = useState<any[]>([]);
+  const [shopDeck, setShopDeck] = useState<any[]>([]);
 
   useEffect(() => {
     console.log("useEffect!");
     populateUserDeck();
+    populateShopDeck();
   }, [userCardIds]);
 
+  //region Deck Handlers
   const populateUserDeck = () => {
     const filteredDeck = AnimalData.filter((animal) =>
       userCardIds.includes(animal.key)
@@ -28,26 +32,31 @@ function App() {
     setUserDeck(filteredDeck);
   };
 
+  const populateShopDeck = () => {
+    const filteredDeck = AnimalData.filter((animal) =>
+      !userCardIds.includes(animal.key)
+    );
+
+    setShopDeck(filteredDeck);
+  };
+
   const addCardId = (newId: number) => {
     if (userCardIds.includes(newId)) {
       return;
     }
     setUserCardIds((prevIds) => [...prevIds, newId]);
 
-    console.log(userCardIds);
+    console.log("Bought new card!");
   };
+  //#endregion
 
-  const handleOpen = () => {
-    setIsModalOpen(true);
-    document.body.style.overflow = "hidden";
-    document.body.style.paddingRight = "15px";
-  };
+  //#region HandleModals
+  const handleDeckOpen = () => setisDeckOpen(true);
+  const handleDeckClose = () => setisDeckOpen(false);
 
-  const handleClose = () => {
-    setIsModalOpen(false);
-    document.body.style.overflow = "";
-    document.body.style.paddingRight = "";
-  };
+  const handleShopOpen = () => setisShopOpen(true);
+  const handleShopClose = () => setisShopOpen(false);
+  //#endregion
 
   const incrementCoins = () => {
     if (userCoins >= 100) return;
@@ -66,16 +75,14 @@ function App() {
           <StyledButton
             size="medium"
             color="secondaryButton"
-            onClick={handleOpen}
+            onClick={handleDeckOpen}
           >
             Open Deck
           </StyledButton>
           <StyledButton
             size="medium"
             color="secondaryButton"
-            onClick={() => {
-              addCardId(7);
-            }}
+            onClick={handleShopOpen}
           >
             Buy Cards
           </StyledButton>
@@ -84,7 +91,20 @@ function App() {
           Get Coins
         </StyledButton>
       </StyledControlsSection>
-      <Modal cards={userDeck} isOpen={isModalOpen} onClose={handleClose} />
+      <Modal
+        cards={userDeck}
+        isShop={false}
+        isOpen={isDeckOpen}
+        onClose={handleDeckClose}
+        onBuyCard={() => {console.log("null")}}
+      />
+      <Modal
+        cards={shopDeck}
+        isShop={true}
+        isOpen={isShopOpen}
+        onClose={handleShopClose}
+        onBuyCard={addCardId}
+      />
     </div>
   );
 }

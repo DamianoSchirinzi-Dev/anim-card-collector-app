@@ -1,4 +1,3 @@
-
 //#region Card
 export type CardPictureProps = {
   src: string;
@@ -8,7 +7,12 @@ export type CardPictureProps = {
   };
 };
 
+export type CardContainerProps = {
+  isInShop: boolean;
+};
+
 export type CardProps = {
+  isInShop: boolean;
   colorLight: any;
   colorDark: any;
   children: any;
@@ -16,6 +20,9 @@ export type CardProps = {
 
 export type AnimalCardProps = {
   key: number;
+  id: number;
+  isInShop: boolean;
+  onBuyCard: (id: number) => void;
   imageUrl: string;
   cardTitle: string;
   speedStat: number;
@@ -32,14 +39,16 @@ export type AnimalCardProps = {
 //#region Modal
 export type ModalProps = {
   cards: any;
+  isShop: boolean;
   isOpen: boolean;
   onClose: () => void;
+  onBuyCard: (id: number) => void;
 };
 //#endregion
 
 //#region Main Screen
 export type StyledButtonProps = {
-  size?: 'small' | 'medium' | 'large';
-  color?: 'primaryButton' | 'secondaryButton';
-}
+  size?: "small" | "medium" | "large";
+  color?: "primaryButton" | "secondaryButton";
+};
 //#endregion
