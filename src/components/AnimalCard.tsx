@@ -57,8 +57,7 @@ export const AnimalCard = (props: AnimalCardProps) => {
           {props.isInShop && (
             <StyledBuyButton
               onClick={() => {
-                console.log(props);
-                props.onBuyCard(props.id);
+                props.onBuyCard(props.id, props.cost);
               }}
             >
               Buy Card

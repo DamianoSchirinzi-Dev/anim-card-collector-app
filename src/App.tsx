@@ -13,7 +13,7 @@ function App() {
   const [isDeckOpen, setisDeckOpen] = useState<boolean>(false);
   const [isShopOpen, setisShopOpen] = useState<boolean>(false);
   const [userCardIds, setUserCardIds] = useState<number[]>([0, 2, 3]);
-  const [userCoins, setUserCoins] = useState<number>(12);
+  const [userCoins, setUserCoins] = useState<number>(20);
   const [userDeck, setUserDeck] = useState<any[]>([]);
   const [shopDeck, setShopDeck] = useState<any[]>([]);
 
@@ -40,13 +40,13 @@ function App() {
     setShopDeck(filteredDeck);
   };
 
-  const addCardId = (newId: number) => {
-    if (userCardIds.includes(newId)) {
+  const addCardId = (newId: number, cost: number) => {
+    if (userCardIds.includes(newId) || cost > userCoins) {
       return;
     }
+    
+    decreaseCoins(cost);
     setUserCardIds((prevIds) => [...prevIds, newId]);
-
-    console.log("Bought new card!");
   };
   //#endregion
 
@@ -63,6 +63,13 @@ function App() {
 
     setUserCoins(userCoins + 1);
   };
+
+  const decreaseCoins = (amount: number) => {
+    if(userCoins <= 0) return;
+
+    const newCoins = userCoins - amount;
+    setUserCoins(newCoins);
+  }
 
   return (
     <div className="mainContainer">

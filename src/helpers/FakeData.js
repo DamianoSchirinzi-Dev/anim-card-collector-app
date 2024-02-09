@@ -2,6 +2,7 @@ export const AnimalData = [
   {
     key: 0,
     id: 0,
+    cost: 10,
     imageUrl: "https://images.unsplash.com/photo-1597953601374-1ff2d5640c85?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     cardTitle: "Giant Panda",
     speedStat: 20,
@@ -15,6 +16,7 @@ export const AnimalData = [
   {
     key: 1,
     id: 1,
+    cost: 10,
     imageUrl: "https://images.unsplash.com/photo-1544211412-2a32426e7fd5?q=80&w=1978&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     cardTitle: "African Elephant",
     speedStat: 40,
@@ -28,6 +30,7 @@ export const AnimalData = [
   {
     key: 2,
     id: 2,
+    cost: 10,
     imageUrl: "https://images.unsplash.com/photo-1619494296448-ab5f847ece97?q=80&w=2050&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     cardTitle: "Cheetah",
     speedStat: 120,
@@ -41,6 +44,7 @@ export const AnimalData = [
   {
     key: 3,
     id: 3,
+    cost: 10,
     imageUrl: "https://images.unsplash.com/photo-1584268297019-243f5c397094?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     cardTitle: "Blue Whale",
     speedStat: 50,
@@ -54,6 +58,7 @@ export const AnimalData = [
   {
     key: 4,
     id: 4,
+    cost: 10,
     imageUrl: "https://images.unsplash.com/photo-1560653251-84afe9d7eef7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     cardTitle: "Bald Eagle",
     speedStat: 160,
@@ -67,6 +72,7 @@ export const AnimalData = [
   {
     key: 5,
     id: 5,
+    cost: 10,
     imageUrl: "https://images.unsplash.com/photo-1561731216-c3a4d99437d5?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     cardTitle: "Siberian Tiger",
     speedStat: 60,
@@ -80,6 +86,7 @@ export const AnimalData = [
   {
     key: 6,
     id: 6,
+    cost: 10,
     imageUrl: "https://images.unsplash.com/photo-1626803111824-0ee594987d4b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     cardTitle: "Kangaroo",
     speedStat: 70,
@@ -93,6 +100,7 @@ export const AnimalData = [
   {
     key: 7,
     id: 7,
+    cost: 10,
     imageUrl: "https://images.unsplash.com/photo-1590691563977-97e10916647b?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     cardTitle: "Komodo Dragon",
     speedStat: 20,
@@ -106,6 +114,7 @@ export const AnimalData = [
   {
     key: 8,
     id: 8,
+    cost: 10,
     imageUrl: "https://images.unsplash.com/photo-1553425300-8bd56360f8eb?q=80&w=1946&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     cardTitle: "Polar Bear",
     speedStat: 40,
@@ -119,6 +128,7 @@ export const AnimalData = [
   {
     key: 9,
     id: 9,
+    cost: 10,
     imageUrl: "https://images.unsplash.com/photo-1628944681206-2ee8d63b0a6b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     cardTitle: "Octopus",
     speedStat: 40,

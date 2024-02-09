@@ -21,8 +21,9 @@ export type CardProps = {
 export type AnimalCardProps = {
   key: number;
   id: number;
+  cost: number;
   isInShop: boolean;
-  onBuyCard: (id: number) => void;
+  onBuyCard: (id: number, cost: number) => void;
   imageUrl: string;
   cardTitle: string;
   speedStat: number;
@@ -42,7 +43,7 @@ export type ModalProps = {
   isShop: boolean;
   isOpen: boolean;
   onClose: () => void;
-  onBuyCard: (id: number) => void;
+  onBuyCard: (id: number, cost:number) => void;
 };
 //#endregion
 

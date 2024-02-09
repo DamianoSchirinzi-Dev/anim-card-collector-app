@@ -34,6 +34,7 @@ export const Modal = ({ cards, isShop, onBuyCard, isOpen, onClose }: ModalProps)
             <AnimalCard
               key={data.key}
               id={data.id}
+              cost={data.cost}
               isInShop={isShop}
               onBuyCard={onBuyCard}
               imageUrl={data.imageUrl}
