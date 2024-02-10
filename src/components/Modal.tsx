@@ -10,7 +10,7 @@ import { colors } from "..//helpers/colors";
 import { useRef, useEffect } from "react";
 import {gsap} from 'gsap';
 
-export const Modal = ({ cards, isShop, onBuyCard, isOpen, onClose }: ModalProps) => {
+export const Modal = ({ cards, isShop, userCoins, onBuyCard, isOpen, onClose }: ModalProps) => {
   const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -55,11 +55,13 @@ export const Modal = ({ cards, isShop, onBuyCard, isOpen, onClose }: ModalProps)
         <GridContainer>
           {cards.map((data: AnimalCardProps) => (
             <AnimalCard
+              userCoins={userCoins}
               key={data.key}
               id={data.id}
               cost={data.cost}
               isInShop={isShop}
               onBuyCard={onBuyCard}
+              onBuyCardFail={data.onBuyCardFail}
               imageUrl={data.imageUrl}
               cardTitle={data.cardTitle}
               speedStat={data.speedStat}

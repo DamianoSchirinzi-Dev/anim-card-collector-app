@@ -6,13 +6,61 @@ import {
   CardWrapper,
   StyledBuyButton,
 } from "./StyledCard";
+import { mainThemeColors } from "../helpers/colors";
 import { AnimalCardProps } from "../helpers/types";
+import { useRef } from "react";
+import { gsap } from "gsap";
 
 export const AnimalCard = (props: AnimalCardProps) => {
+  const cardRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const buttonOriginalColor = buttonRef.current?.style["backgroundColor"];
+
+  const handleBuy = () => {
+    // Simulate checking if the purchase can be made
+    const canPurchase = props.cost <= props.userCoins;
+
+    if (canPurchase) {
+      // Proceed with the purchase animation and completion
+      if (cardRef.current) {
+        gsap.to(cardRef.current, {
+          x: -1000,
+          opacity: 1,
+          duration: 0.3,
+          onComplete: () => {
+            props.onBuyCard(props.id, props.cost, () => {});
+          },
+        });
+      }
+    } else {
+      // If purchase cannot be made, directly call the failure handling
+      handlePurchaseFail();
+    }
+  };
+
+  const handlePurchaseFail = () => {
+    console.log(buttonOriginalColor);
+
+    if (cardRef.current) {
+      gsap.fromTo(
+        cardRef.current,
+        { x: -10 },
+        { x: 10, repeat: 5, yoyo: true, duration: 0.1 }
+      );
+
+      gsap.fromTo(
+        buttonRef.current,
+        { backgroundColor: "#ff0000"},
+        { duration: 0.1 }
+      );
+      gsap.to(buttonRef.current, { backgroundColor: mainThemeColors.primaryButton, duration: 0.5, delay: 0.2 });
+    }
+  };
+
   return (
     <>
       <Reset />
-      <CardWrapper>
+      <CardWrapper ref={cardRef}>
         <Card
           isInShop={props.isInShop}
           colorLight={props.colorLight}
@@ -55,11 +103,7 @@ export const AnimalCard = (props: AnimalCardProps) => {
             )}
           </CardSide>
           {props.isInShop && (
-            <StyledBuyButton
-              onClick={() => {
-                props.onBuyCard(props.id, props.cost);
-              }}
-            >
+            <StyledBuyButton ref={buttonRef} onClick={handleBuy}>
               Buy Card
             </StyledBuyButton>
           )}

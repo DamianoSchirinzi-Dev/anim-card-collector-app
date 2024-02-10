@@ -13,7 +13,7 @@ function App() {
   const [isDeckOpen, setisDeckOpen] = useState<boolean>(false);
   const [isShopOpen, setisShopOpen] = useState<boolean>(false);
   const [userCardIds, setUserCardIds] = useState<number[]>([0, 2, 3]);
-  const [userCoins, setUserCoins] = useState<number>(20);
+  const [userCoins, setUserCoins] = useState<number>(10);
   const [userDeck, setUserDeck] = useState<any[]>([]);
   const [shopDeck, setShopDeck] = useState<any[]>([]);
 
@@ -33,18 +33,21 @@ function App() {
   };
 
   const populateShopDeck = () => {
-    const filteredDeck = AnimalData.filter((animal) =>
-      !userCardIds.includes(animal.key)
-    );
+    const filteredDeck = AnimalData.filter(
+      (animal) => !userCardIds.includes(animal.key)
+    ).slice(0, 5);
 
     setShopDeck(filteredDeck);
   };
 
-  const addCardId = (newId: number, cost: number) => {
+  const addCardId = (newId: number, cost: number, onFail: () => void) => {
+    console.log(userCoins);
+
     if (userCardIds.includes(newId) || cost > userCoins) {
+      onFail();
       return;
     }
-    
+
     decreaseCoins(cost);
     setUserCardIds((prevIds) => [...prevIds, newId]);
   };
@@ -65,11 +68,11 @@ function App() {
   };
 
   const decreaseCoins = (amount: number) => {
-    if(userCoins <= 0) return;
+    if (userCoins <= 0) return;
 
     const newCoins = userCoins - amount;
     setUserCoins(newCoins);
-  }
+  };
 
   return (
     <div className="mainContainer">
@@ -102,13 +105,17 @@ function App() {
         cards={userDeck}
         isShop={false}
         isOpen={isDeckOpen}
+        userCoins={userCoins}
         onClose={handleDeckClose}
-        onBuyCard={() => {console.log("null")}}
+        onBuyCard={() => {
+          console.log("null");
+        }}
       />
       <Modal
         cards={shopDeck}
         isShop={true}
         isOpen={isShopOpen}
+        userCoins={userCoins}
         onClose={handleShopClose}
         onBuyCard={addCardId}
       />
