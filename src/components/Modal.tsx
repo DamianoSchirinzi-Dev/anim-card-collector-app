@@ -7,14 +7,37 @@ import {
 } from "./StyledModal";
 import { ModalProps, AnimalCardProps } from "../helpers/types";
 import { colors } from "..//helpers/colors";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
+import {gsap} from 'gsap';
 
 export const Modal = ({ cards, isShop, onBuyCard, isOpen, onClose }: ModalProps) => {
   const modalRef = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    if (isOpen && modalRef.current) {
+      // Reset styles in case they were modified by closing animation
+      gsap.set(modalRef.current, {
+        x: 0,
+        opacity: 1,
+      });
+
+      // Animate modal from a starting state when it opens
+      gsap.from(modalRef.current, {
+        x: -1000,
+        opacity: 0,
+        duration: 0.4,
+      });
+    }
+  }, [isOpen]);
+
   const handleClose = (e: React.MouseEvent<HTMLDivElement>) => {
     if (modalRef.current && !modalRef.current.contains(e.target as Node)) {
-      onClose();
+      gsap.to(modalRef.current, {
+        x: -1000,
+        opacity: 0,
+        duration: .2,
+        onComplete: onClose, // Call onClose after the animation completes
+      });
     }
   };
 
