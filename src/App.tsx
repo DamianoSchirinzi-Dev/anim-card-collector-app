@@ -2,7 +2,8 @@ import "./App.css";
 import { AnimalData } from "./helpers/FakeData";
 import { Modal } from "./components/Modal";
 import { CoinCounter } from "./components/CoinCounter";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { gsap } from "gsap";
 import {
   StyledControlsSection,
   StyledButton,
@@ -16,6 +17,8 @@ function App() {
   const [userCoins, setUserCoins] = useState<number>(10);
   const [userDeck, setUserDeck] = useState<any[]>([]);
   const [shopDeck, setShopDeck] = useState<any[]>([]);
+
+  const coinCounterRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     console.log("useEffect!");
@@ -65,6 +68,15 @@ function App() {
     if (userCoins >= 100) return;
 
     setUserCoins(userCoins + 1);
+
+    if (coinCounterRef.current) {
+      gsap.to(coinCounterRef.current, {
+        scale: 1.3,
+        duration: 0.1,
+        ease: "elastic.out(1, 0.2)",
+        onComplete: () => {gsap.to(coinCounterRef.current, { scale: 1, duration: 0.2 })}
+      });
+    }
   };
 
   const decreaseCoins = (amount: number) => {
@@ -78,7 +90,7 @@ function App() {
     <div className="mainContainer">
       <StyledNav>
         <img src="../images/CREATURE.png" width={150} height={150}></img>
-        <CoinCounter current={userCoins} max={100} />
+        <CoinCounter ref={coinCounterRef} current={userCoins} max={100} />
       </StyledNav>
       <StyledControlsSection>
         <div className="topButtonMenu">

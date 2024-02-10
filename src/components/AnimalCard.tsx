@@ -44,7 +44,7 @@ export const AnimalCard = (props: AnimalCardProps) => {
     if (cardRef.current) {
       gsap.fromTo(
         cardRef.current,
-        { x: -10 },
+        { x: 0 },
         { x: 10, repeat: 5, yoyo: true, duration: 0.1 }
       );
 
@@ -53,7 +53,7 @@ export const AnimalCard = (props: AnimalCardProps) => {
         { backgroundColor: "#ff0000"},
         { duration: 0.1 }
       );
-      gsap.to(buttonRef.current, { backgroundColor: mainThemeColors.primaryButton, duration: 0.5, delay: 0.2 });
+      gsap.to(buttonRef.current, { backgroundColor: mainThemeColors.primaryButton, duration: 0.8, delay: 0.2 });
     }
   };
 

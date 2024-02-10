@@ -71,19 +71,6 @@ export const CounterCircle = styled.div`
   transition: transform 0.3s ease;
   padding: 10px;
 
-  // Apply the pulse animation
-  animation: ${pulseAnimation} 2s infinite;
-
-  &:hover {
-    transform: scale(1.1); // Slightly enlarge on hover
-    box-shadow: 0 0 20px rgba(91, 127, 252, 0.5); // Add a glow effect on hover
-  }
-
-  &:active {
-    transform: scale(0.9); // Shrink on click
-    box-shadow: 0 0 15px rgba(91, 127, 252, 0.7); // Add a stronger glow effect on click
-  }
-
   @media (max-width: ${breakpoints.tablet}) {
     width: 80px;
     height: 80px;

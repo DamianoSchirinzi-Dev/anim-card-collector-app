@@ -1,3 +1,4 @@
+import {forwardRef} from 'react'
 import {CounterCircle} from './StyledMainPageComponents';
 
 type counter = {
@@ -5,9 +6,9 @@ type counter = {
     max: number;
 }
 
-export const CoinCounter = ({ current, max }: counter)  => (
-  <CounterCircle>
+export const CoinCounter = forwardRef<HTMLDivElement, counter>(({ current, max }, ref) => (
+  <CounterCircle ref={ref}>
     <img src="/images/coins.png" alt="Coins" width={35} height={35} />
     {current}/{max}
   </CounterCircle>
-);
+));
